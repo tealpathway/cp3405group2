@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<HEAD>
+</HEAD>
+<BODY>
+
+<h1><centre>CP3405 Sample App Architecture </centre> </h1>
+
+<h2>External php Libraries (i.e. Dependencies) </h2>
+<p>
+Dependencies are to be managed by <A href="http://getcomposer.org">Composer</a> 
+</p>
+<p>
+Composer relies on: 
+<ol>
+<li>a "vendor" directory containing php class files and modules</li>
+<li>a "composer.json" file with references to any required files in /vendor</li>
+</ol>
+When new php classes are used by the app, entries are added to composer.json and a command is run to update the vendor/ datastore.  The datastore can be rebuilt from the definitions recorded in composer.json, so only it needs to be checked into the selected version control system (in out=r case, git on github).  The .gitignore file should be used to exclude any files under vendor/
+</p>
+
+<h2>Custom php modules and libraries</h2>
+<p>
+Any php modules and classes specifically written for the app should be placed in the app/ subdirectory these can be referenced by files in the root of the app directory.
+</p>
+
+
+</BODY>
+
